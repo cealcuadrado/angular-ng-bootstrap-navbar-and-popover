@@ -2,9 +2,26 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <div class="ml-auto">
-      <a href="#">
+      <button class="btn" [ngbPopover]="popContent" [popoverTitle]="popTitle">
         <i class="fa fa-cog fa-fw"></i>
-      </a>
+      </button>
     </div>
   </div>
 </nav>
+
+<ng-template #popTitle>
+  Tamaño de letra
+</ng-template>
+<ng-template #popContent>
+  <div class="d-flex">
+    <button type="button" class="btn btn-primary btn-sm mr-2">
+      <i class="fa fa-font fa-fw"></i>
+    </button>
+    <button type="button" class="btn btn-primary mr-2">
+      <i class="fa fa-font fa-fw"></i>
+    </button>
+    <button type="button" class="btn btn-primary btn-lg">
+      <i class="fa fa-font fa-fw"></i>
+    </button>
+  </div>
+</ng-template>
